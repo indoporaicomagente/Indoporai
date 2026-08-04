@@ -9,3 +9,29 @@
 @keyframes pulseCamera{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.12);opacity:1}}
 .live-caption{position:absolute;bottom:18px;left:18px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
 .live-info{padding:0 18px 18px}
+
+.premium-hero{min-height:470px;border-radius:28px;overflow:hidden;position:relative;background-image:linear-gradient(180deg,rgba(4,54,60,.05),rgba(4,54,60,.82)),url("assets/praia.jpg");background-size:cover;background-position:center;box-shadow:var(--shadow)}
+.hero-overlay{position:absolute;inset:0;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;color:white}
+.hero-overlay h1{font-size:38px;line-height:1.02;margin:8px 0 14px;max-width:320px}
+.hero-overlay p{line-height:1.5;font-size:16px;max-width:320px}
+.hero-overlay .cta{margin-top:12px;width:100%}
+.cta.glass{background:rgba(255,255,255,.92);color:var(--teal);box-shadow:none}
+.destination-scroll{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x mandatory}
+.destination-card{min-width:230px;height:290px;border:0;border-radius:24px;background-size:cover;background-position:center;position:relative;overflow:hidden;scroll-snap-align:start;color:white;text-align:left;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)}
+.destination-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.78))}
+.destination-card span,.destination-card small{position:relative;z-index:1}
+.destination-card span{font-size:27px;font-weight:950}
+.destination-card small{font-size:13px;line-height:1.35;margin-top:5px}
+.journey-card{display:flex;flex-direction:column;gap:16px}
+.journey-step{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center}
+.journey-step b{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--orange),var(--gold));color:white;display:grid;place-items:center;font-size:18px}
+.journey-step span{display:flex;flex-direction:column;gap:3px}
+.journey-step small{color:var(--muted)}
+.brand-callout{margin-top:18px;background:linear-gradient(135deg,#FFF5DF,#E3F4F1);padding:14px;border-radius:20px;display:flex;align-items:center;gap:12px}
+.brand-callout img{width:96px;height:72px;object-fit:contain}
+.brand-callout div{display:flex;flex-direction:column;gap:4px}
+.brand-callout small{color:var(--muted)}
+.splash-logo{animation:logoPulse 1.8s ease-in-out infinite}
+.plane{position:absolute;animation:orbit 2.3s linear infinite;font-size:32px}
+@keyframes orbit{0%{transform:translate(-130px,-60px) rotate(0deg)}25%{transform:translate(130px,-80px) rotate(15deg)}50%{transform:translate(145px,70px) rotate(160deg)}75%{transform:translate(-135px,80px) rotate(205deg)}100%{transform:translate(-130px,-60px) rotate(360deg)}}
+@keyframes logoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
