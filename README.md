@@ -1,30 +1,24 @@
-# Indo por Aí — última versão com logo corrigido
+# Indo por Aí — correção definitiva do logo
 
-Esta é a mesma última versão aprovada, sem alteração de layout ou funcionalidades.
+Mantive a última versão do aplicativo e alterei somente a forma de carregar a marca.
 
-## Única correção realizada
-O PNG do logo foi incorporado diretamente no arquivo `index.html` em formato Base64.
+## O que foi corrigido
+- O logo foi reduzido e otimizado.
+- O PNG foi inserido literalmente no `index.html`.
+- O mesmo PNG foi inserido literalmente em cada página dinâmica do `app.js`.
+- Não existe mais variável `${BRAND_LOGO}`.
+- Nenhuma página depende de `assets/logo.png`.
+- CSS e JavaScript receberam versão no endereço para evitar cache antigo.
+- O Service Worker agora busca primeiro a versão online dos arquivos principais.
+- O arquivo `_headers` impede o Netlify de manter HTML, CSS e JS antigos em cache.
 
-Assim, o logo da tela de carregamento e o logo do cabeçalho não dependem mais de:
-- nome da pasta;
-- caminho `assets/logo.png`;
-- diferença entre letras maiúsculas e minúsculas;
-- falha de upload da imagem no GitHub.
+## Como publicar
+Suba todos estes arquivos para a raiz do GitHub, incluindo o arquivo `_headers`.
 
-A pasta `assets` continua no projeto para os ícones do aplicativo.
+Depois:
+1. Aguarde o deploy do Netlify.
+2. Abra o endereço em uma aba privada do Safari para confirmar.
+3. Remova o app antigo da tela inicial.
+4. Adicione o app novamente.
 
-## Como subir
-Descompacte o ZIP e envie para a raiz do GitHub:
-- index.html
-- styles.css
-- app.js
-- manifest.webmanifest
-- service-worker.js
-- README.md
-- assets/
-
-Depois do deploy:
-1. Remova o app antigo da tela inicial.
-2. Abra o endereço no Safari.
-3. Atualize a página.
-4. Adicione novamente à Tela de Início.
+Esta correção não altera o layout ou as funcionalidades.
