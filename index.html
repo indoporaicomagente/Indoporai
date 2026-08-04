@@ -1,1 +1,46 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0F7F86"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Indo por Aí"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css"><title>Indo por Aí — Beta 0.7</title></head><body><div id="splash" class="splash"><img src="assets/logo.png" class="splash-logo"><div class="plane">✈</div><p>Sua próxima aventura começa aqui.</p></div><div id="app" class="app hidden"><header class="topbar"><img src="assets/logo.png" class="brand-logo"><button class="icon-btn" id="stateMenuBtn">⋯</button></header><main id="screen" class="screen"></main><nav class="bottom-nav"><button data-route="home" class="active"><span>⌂</span>Início</button><button data-route="explore"><span>⌕</span>Explorar</button><button data-route="trip"><span>✈</span>Viagem</button><button data-route="community"><span>◎</span>Grupo</button><button data-route="profile"><span>☺</span>Perfil</button></nav></div><div id="modal" class="modal hidden"></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#075568" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Indo por Aí" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Indo por Aí — Labs Beta 0.6</title>
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-orbit"><span>✈</span></div>
+    <img src="assets/logo.png" alt="Indo por Aí com a gente" />
+    <p>Sua viagem. Nosso cuidado.</p>
+    <small>LABS · BETA 0.6</small>
+  </div>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="circle-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <div class="brand-top"><img src="assets/logo.png" alt="Indo por Aí"><div class="top-title"><strong id="topTitle">Hoje</strong><small>Indo por Aí Labs</small></div></div>
+      <button class="avatar" id="profileBtn" aria-label="Perfil">RF<span></span></button>
+    </header>
+
+    <main id="view" class="view" aria-live="polite"></main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <button data-route="today" class="nav-item active"><span>⌂</span><small>Hoje</small></button>
+      <button data-route="trip" class="nav-item"><span>▣</span><small>Viagem</small></button>
+      <button data-route="explore" class="nav-item"><span>⌖</span><small>Explorar</small></button>
+      <button data-route="community" class="nav-item"><span>◌</span><small>Grupo</small><b>3</b></button>
+      <button data-route="memories" class="nav-item"><span>♡</span><small>Memórias</small></button>
+    </nav>
+  </div>
+
+  <dialog id="modal" class="modal"><div id="modalContent"></div><button class="modal-close" id="modalClose">Fechar</button></dialog>
+  <input id="photoInput" type="file" accept="image/*" multiple hidden />
+  <script src="app.js"></script>
+</body>
+</html>
