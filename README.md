@@ -1,19 +1,30 @@
-# Indo por Aí — Beta 0.6 PWA
+# Indo por Aí — última versão com logo corrigido
 
-Versão de teste com dois cenários:
+Esta é a mesma última versão aprovada, sem alteração de layout ou funcionalidades.
 
-1. **Ainda não sou cliente**: apresentação dos serviços, formulário de planejamento, acompanhamento da proposta e aprovação simulada.
-2. **Já sou cliente**: modos antes, durante e depois da viagem, roteiro, mapa, grupo, memórias e painel administrativo.
+## Única correção realizada
+O PNG do logo foi incorporado diretamente no arquivo `index.html` em formato Base64.
 
-## Modo Live simulado
+Assim, o logo da tela de carregamento e o logo do cabeçalho não dependem mais de:
+- nome da pasta;
+- caminho `assets/logo.png`;
+- diferença entre letras maiúsculas e minúsculas;
+- falha de upload da imagem no GitHub.
 
-- Cronômetro em tempo real
-- Audiência
-- Reações animadas
-- Foto, microfone e compartilhamento de localização simulados
-- Encerramento da transmissão
+A pasta `assets` continua no projeto para os ícones do aplicativo.
 
-## Publicação
+## Como subir
+Descompacte o ZIP e envie para a raiz do GitHub:
+- index.html
+- styles.css
+- app.js
+- manifest.webmanifest
+- service-worker.js
+- README.md
+- assets/
 
-Envie todos os arquivos e a pasta `assets` para a raiz do repositório conectado ao Netlify.
-Após publicar, remova o app antigo da tela inicial e instale novamente para atualizar logo, ícone e cache.
+Depois do deploy:
+1. Remova o app antigo da tela inicial.
+2. Abra o endereço no Safari.
+3. Atualize a página.
+4. Adicione novamente à Tela de Início.
